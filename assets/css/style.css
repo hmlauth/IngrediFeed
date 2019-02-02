@@ -3,10 +3,6 @@
   min-height: 600px;
 }
 
-#parallax-image {
-  bottom: -600px;
-}
-
 #trending-cuisine-container {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -27,12 +23,11 @@
 
 .ingredient-container {
   margin-top: 50px;
+  padding: 20px;
 }
 
 .ingredient-header {
   text-align: center;
-  background: rgba(255, 225, 0, 0.605);
-  padding: 20px;
 }
 
 .ingredient-body {
@@ -59,7 +54,7 @@
 footer {
   background-color: black;
   color: white;
-  padding: 10px 0px 10px 0px;
+  padding: 30px 0px 30px 0px;
   text-align: center;
   font-size: small;
   margin-top: 10px;
