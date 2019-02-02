@@ -21,9 +21,9 @@
     <!-- NAVIGATION -->
     <nav class="black" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <a id="logo-container" href="#" class="brand-logo"><i class="material-icons prefix">restaurant</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Link</a></li>
+                <li><a href="#">Navbar Links</a></li>
             </ul>
 
             <ul id="nav-mobile" class="sidenav">
@@ -33,7 +33,7 @@
         </div>
     </nav>
 
-    <!-- PARALLX PHOTO -->
+    <!-- PARALLX PHOTO - MAIN -->
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
@@ -73,16 +73,31 @@
                         </div>
                     </div>
                     <div class="col s12 m4 l4">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">restaurant</i>
-                                    <input type="text" id="autocomplete-input" class="autocomplete">
-                                    <label for="autocomplete-input">Veggies</label>
-                                    <p>List up to three veggies separated by a comma (i.e. carrots, brocolli, spinach</p>
-                                </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">restaurant</i>
+                                <input type="text" id="autocomplete-input" class="autocomplete">
+                                <label for="autocomplete-input">Veggies</label>
+                                <p>List up to three veggies separated by a comma (i.e. carrots, brocolli, spinach</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select multiple>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Vegan</option>
+                                    <option value="2">Vegetarian</option>
+                                    <option value="3">Gluten Free</option>
+                                </select>
+                                <label>Materialize Multiple Select</label>
                             </div>
                         </div>
+                    </div>
                 </div>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
             </div>
             <div class="ingredient-body">
                 <!-- Card A -->
@@ -100,7 +115,11 @@
                             <li id="health-option">Health Option #2</li>
                             <li id="health-option">Health Option #3</li>
                         </ul>
-                        <p><a href="#">This is a link</a></p>
+                        <div class="link-container">
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                        </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
@@ -124,7 +143,14 @@
                             <li id="health-option">Health Option #2</li>
                             <li id="health-option">Health Option #3</li>
                         </ul>
-                        <p><a href="#">This is a link</a></p>
+
+
+                        <div class="link-container">
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                        </div>
+
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
@@ -148,7 +174,11 @@
                             <li id="health-option">Health Option #2</li>
                             <li id="health-option">Health Option #3</li>
                         </ul>
-                        <p><a href="#">This is a link</a></p>
+                        <div class="link-container">
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
+                        </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
@@ -160,6 +190,14 @@
             </div>
         </div>
     </div>
+
+    <!-- PARALLX PHOTO - CUISINE -->
+    <div id="index-banner" class="parallax-container">
+        <div class="parallax">
+            <img src="assets/images/pasta-basket.jpeg" alt="ingredients image" id="cuisine-parallax-image">
+        </div>
+    </div>
+
     <div class="container" id="trending-cuisine-container">
         <!-- TRENDING CUISINE CONTAINER -->
         <div class="trending-cuisine-header">
@@ -228,10 +266,10 @@
             <footer>Copyright &copy;</footer>
         </div>
 
+        <!-- jQuery Link - Need to put before Materialize link for Materialize jQuery logic to work -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- JavaScript Materialize Link -->
         <script src="assets/javascript/materialize.min.js"></script>
-        <!-- jQuery Link -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- JavaScript Link -->
         <script src="assets/javascript/app.js"></script>
 </body>

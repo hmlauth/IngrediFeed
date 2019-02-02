@@ -1,3 +1,17 @@
+$(document).ready(function(){
+// Materialize initialize for drop down selection menu for health options
+  $('select').formSelect();
+  // Materialize intiialize autocomplete for ingredient input boxes
+  $('input.autocomplete').autocomplete({
+    data: {
+      "Apple": null,
+      "Broccoli": null,
+      "Google": 'https://placehold.it/250x250'
+    },
+  });
+});
+     
+
 //cuisine search function
 function cuisineSearch(response){
     var response = JSON.parse(JSONresponse);
@@ -60,3 +74,4 @@ $('#ingredient-search-button').on('click', function(){
         $('#ingredient-field').append(ingredientPhoto).append(label).append(totalTime).append(linkToRecipe).append(servingSize).append(ingredientsDOM).append(dietRestrictions);
     })
 })
+  
