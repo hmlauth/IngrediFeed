@@ -14,6 +14,7 @@ function cuisineSearch(response){
 };
 
 
+
 //pageload trending cuisine search
 $.ajax({
     // url:'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70',
