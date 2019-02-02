@@ -31,6 +31,8 @@
 
 .ingredient-header {
   text-align: center;
+  background: rgba(255, 225, 0, 0.605);
+  padding: 20px;
 }
 
 .ingredient-body {
@@ -42,6 +44,15 @@
 .ingredient-card {
   width: 100%;
   margin: 10px;
+}
+
+.link-container {
+  text-align: center;
+}
+
+#placeholder-p {
+  letter-spacing: 3px;
+  border-top: 1px rgba(0, 0, 255, 0.633) solid;
 }
 
 /* FOOTER*/
