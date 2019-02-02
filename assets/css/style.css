@@ -1,0 +1,75 @@
+
+.parallax-container {
+  min-height: 600px;
+}
+
+#parallax-image {
+  bottom: -600px;
+}
+
+#trending-cuisine-container {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+#trending-cuisine-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.cuisine-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+
+.ingredient-container {
+  margin-top: 50px;
+}
+
+.ingredient-header {
+  text-align: center;
+}
+
+.ingredient-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.ingredient-card {
+  width: 100%;
+  margin: 10px;
+}
+
+/* FOOTER*/
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  font-size: small;
+  margin-top: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 4000px;
+  width: 90%;
+}
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 70%;
+  }
+}

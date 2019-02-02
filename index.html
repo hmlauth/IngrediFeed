@@ -4,24 +4,236 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Recipe Application</title>
+    <title>IngrediFeed</title>
+    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Materialize Link -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/materialize.min.css" />
+    <!-- CSS Materialize Link -->
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="assets/css/materialize.min.css" />
+    <!-- CSS Materialize Link - Additional -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/styleM.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
 </head>
 
 <body>
+    <!-- NAVIGATION -->
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <!-- PARALLX PHOTO -->
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center teal-text text-lighten-2">IngrediFeed</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light" id="ingredient-title">Give us what you got <span id="and">and</span>
+                        we'll give you what we
+                        have!</h5>
+                </div>
+                <div class="row center">
+                    <button id="cuisine-button" class="btn-large waves-effect waves-light teal lighten-1">Cuisine</button>
+                    <button id="ingredient-button" class="btn-large waves-effect waves-light teal lighten-1">Ingredients</button>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="assets/images/rosemary-lemon-ingredients.jpeg" alt="ingredients image" id="parallax-image">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="col s6 m8 l8 ingredient-container z-depth-5">
+            <!-- INGREDIENT APPLICATION -->
+            <div class="ingredient-header">
+                <div class="row">
+                    <div class="col s12 m4 l4">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">local_dining</i>
+                                <input type="text" id="autocomplete-input" class="autocomplete">
+                                <label for="autocomplete-input">Protein</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">restaurant</i>
+                                    <input type="text" id="autocomplete-input" class="autocomplete">
+                                    <label for="autocomplete-input">Veggies</label>
+                                    <p>List up to three veggies separated by a comma (i.e. carrots, brocolli, spinach</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="ingredient-body">
+                <!-- Card A -->
+                <div class="card large ingredient-card" style="height: 100%;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator ingredient-img" src="assets/images/raspberries.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                            <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
+                        </span>
+                        <h5 id="total-time">Total Time:</h5>
+                        <ul>
+                            <li id="health-option">Health Option #1</li>
+                            <li id="health-option">Health Option #2</li>
+                            <li id="health-option">Health Option #3</li>
+                        </ul>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+                <!-- Card B -->
+                <div class="card large ingredient-card" style="height: 100%;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator ingredient-img" src="assets/images/orange-slices.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                            <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
+                        </span>
+                        <h5 id="total-time">Total Time:</h5>
+                        <ul>
+                            <li id="health-option">Health Option #1</li>
+                            <li id="health-option">Health Option #2</li>
+                            <li id="health-option">Health Option #3</li>
+                        </ul>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+                <!-- Card C -->
+                <div class="card large ingredient-card" style="height: 100%;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator ingredient-img" src="assets/images/blueberries.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                            <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
+                        </span>
+                        <h5 id="total-time">Total Time:</h5>
+                        <ul>
+                            <li id="health-option">Health Option #1</li>
+                            <li id="health-option">Health Option #2</li>
+                            <li id="health-option">Health Option #3</li>
+                        </ul>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="trending-cuisine-container">
+        <!-- TRENDING CUISINE CONTAINER -->
+        <div class="trending-cuisine-header">
+            <h2 id="cuisine-title">What cuisine are you feelin'?</h2>
+        </div>
+        <div class="row" id="trending-cuisine-body">
+            <!-- Card A -->
+            <div class="col">
+                <h2 class="header">Horizontal Card</h2>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card B -->
+            <div class="col">
+                <h2 class="header">Horizontal Card</h2>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card C -->
+            <div class="col">
+                <h2 class="header">Horizontal Card</h2>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
 
-    <!-- JavaScript Materialize Link -->
-    <script src="assets/javascript/materialize.min.js"></script>
-    <!-- JavaScript Link -->
-    <script src="assets/javascript/app.js"></script>
+
+        <!-- FOOTER -->
+        <div class="bottom">
+            <footer>Copyright &copy;</footer>
+        </div>
+
+        <!-- JavaScript Materialize Link -->
+        <script src="assets/javascript/materialize.min.js"></script>
+        <!-- jQuery Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- JavaScript Link -->
+        <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
