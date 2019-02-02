@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+    $('select').formSelect();
+  });
+
 // Materialize initialize for drop down selection menu for health options
   $('select').formSelect();
   // Materialize intiialize autocomplete for ingredient input boxes
@@ -75,3 +79,4 @@ $('#ingredient-search-button').on('click', function(){
     })
 })
   
+
