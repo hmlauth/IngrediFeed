@@ -14,7 +14,6 @@
     <link href="assets/css/styleM.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-
 </head>
 
 <body>
@@ -52,11 +51,12 @@
 
             </div>
         </div>
+        <!-- PARALLAX PHOTO #1 -->
         <div class="parallax">
             <img src="assets/images/rosemary-lemon-ingredients.jpeg" alt="ingredients image" id="parallax-image">
         </div>
-    </div>
 
+    </div>
 
     <div class="container">
         <div class="col s6 m8 l8 ingredient-container z-depth-5">
@@ -68,7 +68,7 @@
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">local_dining</i>
                                 <input type="text" id="autocomplete-input" class="autocomplete">
-                                <label for="autocomplete-input">Protein</label>
+                                <label for="autocomplete-input">Ingredient #1</label>
                             </div>
                         </div>
                     </div>
@@ -77,9 +77,7 @@
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">restaurant</i>
                                 <input type="text" id="autocomplete-input" class="autocomplete">
-                                <label for="autocomplete-input">Veggies</label>
-                                <p>List up to three veggies separated by a comma (i.e. carrots, brocolli, spinach</p>
-
+                                <label for="autocomplete-input">Ingredient #2</label>
                             </div>
                         </div>
                     </div>
@@ -87,34 +85,33 @@
                         <div class="input-field col s12">
                             <div class="row">
                                 <select multiple>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="" disabled selected>Health Options</option>
+                                    <option value="1">vegan</option>
+                                    <option value="2">vegetarian</option>
+                                    <option value="3">gluten-free</option>
+                                    <option value="4">low-sodium</option>
+                                    <option value="5">egg-free</option>
+                                    <option value="6">dairy-free</option>
+                                    <option value="7">low-carb</option>
+                                    <option value="8">low-fat</option>
+                                    <option value="9">high-fiber</option>
+                                    <option value="10">high-protein</option>
+                                    <option value="11">alcohol-free</option>
+                                    <option value="12">crustacean-free</option>
+                                    <option value="13">kosher</option>
+                                    <option value="14">paleo</option>
+                                    <option value="15">peanut-free</option>
+                                    <option value="16">shellfish-free</option>
+                                    <option value="17">wheat-free</option>
+                                    <option value="18">soy-free</option>
+                                    <option value="19">sugar-conscious</option>
+                                    <option value="20">red-meat-free</option>
                                 </select>
-                                <label>Materialize Multiple Select</label>
-
                             </div>
-
                         </div>
                     </div>
-
-                    <div class="col s12 m4 l4">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <select multiple>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Vegan</option>
-                                    <option value="2">Vegetarian</option>
-                                    <option value="3">Gluten Free</option>
-                                </select>
-                                <label>Materialize Multiple Select</label>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
+                <button class="waves-effect waves-light btn-large">IngrediFeed Me!</button>
             </div>
             <div class="ingredient-body">
                 <!-- Card A -->
@@ -124,19 +121,6 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
-                            <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
-                        </span>
-                        <h5 id="total-time">Total Time:</h5>
-                        <ul>
-                            <li id="health-option">Health Option #1</li>
-                            <li id="health-option">Health Option #2</li>
-                            <li id="health-option">Health Option #3</li>
-                        </ul>
-                        <div class="link-container">
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                        </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
@@ -152,22 +136,6 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
-                            <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
-                        </span>
-                        <h5 id="total-time">Total Time:</h5>
-                        <ul>
-                            <li id="health-option">Health Option #1</li>
-                            <li id="health-option">Health Option #2</li>
-                            <li id="health-option">Health Option #3</li>
-                        </ul>
-
-
-                        <div class="link-container">
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                        </div>
-
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
@@ -183,19 +151,6 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
-                            <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
-                        </span>
-                        <h5 id="total-time">Total Time:</h5>
-                        <ul>
-                            <li id="health-option">Health Option #1</li>
-                            <li id="health-option">Health Option #2</li>
-                            <li id="health-option">Health Option #3</li>
-                        </ul>
-                        <div class="link-container">
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                            <p id="placeholder-p"><a href="#">PLACEHOLDER</a></p>
-                        </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
@@ -208,84 +163,53 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="col s6 m8 l8 ingredient-container z-depth-5">
-            <!-- Cuisine APPLICATION -->
-            <div class="ingredient-header">
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                    <label>Materialize Select</label>
-                </div>
-            </div>
-        <div class="ingredient-body">
-            <!-- cuisine card -->
-            <div class="card large ingredient-card" style="height: 100%;">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator ingredient-img" src="assets/images/japanese1.jpeg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
-                    </span>
-                    <h5 id="total-time">Total Time:</h5>
-                    <p>Country</p>
-                    <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">
-                        <h4>Recipe Name</h4>><i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-
-
-    <!-- PARALLX PHOTO - CUISINE -->
-    <div id="index-banner" class="parallax-container">
-        <div class="parallax">
-            <img src="assets/images/pasta-basket.jpeg" alt="ingredients image" id="cuisine-parallax-image">
-        </div>
+    <!-- PARALLAX PHOTO #2 -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/pasta-basket.jpeg"></div>
     </div>
 
-    <div class="container" id="trending-cuisine-container">
+    <div class="container">
         <!-- TRENDING CUISINE CONTAINER -->
         <div class="trending-cuisine-header">
             <h2 id="cuisine-title">What cuisine are you feelin'?</h2>
-        </div>
-        <div class="row" id="trending-cuisine-body">
-            <!-- Card A -->
-            <div class="col">
-                <h2 class="header">Horizontal Card</h2>
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
+            <div class="col s12 m4 l4">
+                <div class="input-field col s12">
+                    <div class="row">
+                        <select multiple>
+                            <option value="" disabled selected>Cuisine Options</option>
+                            <option value="1">Japanese</option>
+                            <option value="2">Indian</option>
+                            <option value="3">Chinese</option>
+                            <option value="3">Italian</option>
+                        </select>
                     </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-            <!-- Card B -->
+        </div>
+        <!-- TRENDING CUISINE BODY -->
+        <div class="ingredient-body">
+            <!-- Card A -->
             <div class="card large ingredient-card" style="height: 100%;">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator ingredient-img" src="assets/images/italian.jpeg">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
-                        <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">
+                        <h4>Recipe Name</h4>><i class="material-icons right">close</i>
                     </span>
-                    <h5 id="total-time">Total Time:</h5>
-                    <p>Country</p>
-                    <p><a href="#">This is a link</a></p>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+            </div>
+            <!-- Card B -->
+            <div class="card large ingredient-card" style="height: 100%;">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator ingredient-img" src="assets/images/japanese.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">
@@ -297,15 +221,10 @@
             <!-- Card C -->
             <div class="card large ingredient-card" style="height: 100%;">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator ingredient-img" src="assets/images/mexican2.jpeg">
+                    <img class="activator ingredient-img" src="assets/images/mexican.jpeg">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">
-                        <h4>Recipe Name</h4><i class="material-icons right">more_vert</i>
-                    </span>
-                    <h5 id="total-time">Total Time:</h5>
-                    <p>Country</p>
-                    <p><a href="#">This is a link</a></p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">
@@ -316,33 +235,24 @@
             </div>
         </div>
     </div>
-</div>
 
-
-
-
-
-
+    <!-- PARALLAX PHOTO #3 -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/red-black-cutting-board.jpeg"></div>
+    </div>
 
     <!-- FOOTER -->
     <div class="bottom">
         <footer>Copyright &copy;</footer>
     </div>
 
-    <!-- JavaScript Materialize Link -->
+
+    <!-- jQuery Link - Need to put before Materialize link for Materialize jQuery logic to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- JavaScript Materialize Link -->
     <script src="assets/javascript/materialize.min.js"></script>
-    <!-- jQuery Link -->
     <!-- JavaScript Link -->
     <script src="assets/javascript/app.js"></script>
-
-
-        <!-- jQuery Link - Need to put before Materialize link for Materialize jQuery logic to work -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- JavaScript Materialize Link -->
-        <script src="assets/javascript/materialize.min.js"></script>
-        <!-- JavaScript Link -->
-        <script src="assets/javascript/app.js"></script>
 
 </body>
 
