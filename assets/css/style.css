@@ -38,7 +38,7 @@ h5 {
   margin-bottom: 150px;
 }
 
-.trending-cuisine-header {
+.trending-cuisine-header, .favorites-header {
   text-align: center;
 }
 
@@ -59,11 +59,10 @@ h5 {
   margin-bottom: 50px;
 }
 
-.ingredient-container, .cuisine-container {
+.ingredient-container, .cuisine-container, .favorites-container {
   margin: 100px;
   padding: 20px;
   background-color: white;
-  box-shadow: 0px 5px 100px 10px powderblue;
 }
 
 .ingredient-header {
@@ -89,7 +88,7 @@ h5 {
   text-align: center;
 }
 
-.cuisine-select-wrapper {
+#cuisine-input-div {
   margin-right: 250px;
   margin-left: 250px;
 }

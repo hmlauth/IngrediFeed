@@ -33,6 +33,10 @@ $(document).ready(function(){
       "Cilantro": null,
       "Mint": null,
       "Pepper Flakes": null,
+      "Indian": null,
+      "Chinese": null,
+      "Japanese": null,
+      "American": null,
     },
 });
  
