@@ -79,6 +79,7 @@ $('#cuisine-search-button').on('click', function(){
   };
 });
 
+
 //ingredient search listener
 $(document).on('click', '#ingredient-search-button', function(){
   $('#ul-0, #ul-1, #ul-2').empty()
