@@ -50,6 +50,7 @@
                 <div class="row center">
                     <a href="#cuisine-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Cuisine</a>
                     <a href="#ingredient-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Ingredients</a>
+                    <a href="#favorites-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Favorites</a>
                 </div>
                 <br><br>
 
@@ -96,23 +97,7 @@
                                     <option id='health-option-2' value="1">vegan</option>
                                     <option id='health-option-3' value="2">vegetarian</option>
                                     <option id='health-option-4' value="3">gluten-free</option>
-                                    <option id='health-option-5' value="4">low-sodium</option>
-                                    <option id='health-option-6' value="5">egg-free</option>
-                                    <option id='health-option-7' value="6">dairy-free</option>
-                                    <option id='health-option-8' value="7">low-carb</option>
-                                    <option id='health-option-9' value="8">low-fat</option>
-                                    <option id='health-option-10' value="9">high-fiber</option>
-                                    <option id='health-option-11' value="10">high-protein</option>
-                                    <option id='health-option-12' value="11">alcohol-free</option>
-                                    <option id='health-option-13' value="12">crustacean-free</option>
-                                    <option id='health-option-14' value="13">kosher</option>
                                     <option id='health-option-15' value="14">paleo</option>
-                                    <option id='health-option-16' value="15">peanut-free</option>
-                                    <option id='health-option-17' value="16">shellfish-free</option>
-                                    <option id='health-option-18' value="17">wheat-free</option>
-                                    <option id='health-option-19' value="18">soy-free</option>
-                                    <option id='health-option-20' value="19">sugar-conscious</option>
-                                    <option id='health-option-21' value="20">red-meat-free</option>
                                 </select>
                             </div>
                         </div>
@@ -217,25 +202,16 @@
         <div class="col s6 m8 l8 ingredient-container">
             <div class="trending-cuisine-header">
                 <h2 id="cuisine-title">What cuisine are you feelin'?</h2>
-                <div class="col s6 m4 l4">
-                    <div class="input-field col s12">
-                        <div class="row">
-                            <div class="cuisine-select-wrapper">
-                                <select multiple>
-                                    <option value="" disabled selected>Cuisine Options</option>
-                                    <option value="1">Japanese</option>
-                                    <option value="2">Indian</option>
-                                    <option value="3">Chinese</option>
-                                    <option value="3">Italian</option>
-                                </select>
-                            </div>
+                <div class="col s12 m4 l4">
+                    <div class="row" id="cuisine-input-div">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">restaurant</i>
+                            <input type="text" id="cuisine-search" class="autocomplete">
+                            <label for="autocomplete-input">Cuisine</label>
                         </div>
                     </div>
                 </div>
-                <div class="col s6 m4 l4">
-                    <button id='cuisine-search-button' class="waves-effect waves-light btn-large z-depth-5">Let's
-                        Travel!</button>
-                </div>
+                <button id='cuisine-search-button' class="waves-effect waves-light btn-large z-depth-5">Let's Eat!</button>
             </div>
             <!-- TRENDING CUISINE BODY -->
             <div class="ingredient-body">
@@ -291,6 +267,24 @@
     <!-- PARALLAX PHOTO #3 -->
     <div class="parallax-container">
         <div class="parallax"><img src="assets/images/red-black-cutting-board.jpeg"></div>
+    </div>
+
+    <div class="container scrollspy" id="favorites-content">
+        <!-- FAVOTIES CONTAINER -->
+        <div class="col s6 m8 l8 favorites-container">
+            <div class="favorites-header">
+                <h2 id="favorites-title">My Favorite Recipes</h2>
+            </div>
+            <!-- FAVORTIES BODY -->
+            <div class="favorites-body">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PARALLAX PHOTO #3 -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/recipes1.jpeg"></div>
     </div>
 
     <!-- FOOTER -->
