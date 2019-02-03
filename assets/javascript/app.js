@@ -34,10 +34,7 @@ $(document).ready(function(){
     },
   });
 });
-      
-
-   
-
+    
 //cuisine search function
 function cuisineSearch(response){
   var response = JSON.parse(JSONresponse);
