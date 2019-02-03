@@ -49,7 +49,7 @@ function cuisineSearch(response){
         var newTrendingRecipe = $('<div>').append(trendingPhoto);
         $('#cuisine-field').append(title).append(newTrendingRecipe).append(recipeSource);
     };
-});
+};
   
 //cuisine search function
 function cuisineSearch(response){
@@ -186,4 +186,4 @@ $('#ingredient-search-button').on('click', function(){
       
   })
 })
-
+});
