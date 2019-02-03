@@ -12,6 +12,10 @@
     <!-- CSS Materialize Link - Additional -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/styleM.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <!-- Google Icons Link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
@@ -35,7 +39,7 @@
     <!-- PARALLX PHOTO - MAIN -->
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
-            <div class="container">
+            <div class="container z-depth-5" id="heading-container">
                 <br><br>
                 <h1 class="header center teal-text text-lighten-2">IngrediFeed</h1>
                 <div class="row center">
@@ -44,8 +48,9 @@
                         have!</h5>
                 </div>
                 <div class="row center">
-                    <button id="cuisine-button" class="btn-large waves-effect waves-light teal lighten-1">Cuisine</button>
-                    <button id="ingredient-button" class="btn-large waves-effect waves-light teal lighten-1">Ingredients</button>
+                    <a href="#cuisine-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Cuisine</a>
+                    <a href="#ingredient-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Ingredients</a>
+                    <a href="#favorites-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Favorites</a>
                 </div>
                 <br><br>
 
@@ -58,10 +63,13 @@
 
     </div>
 
-    <div class="container">
-        <div class="col s6 m8 l8 ingredient-container z-depth-5">
+    <div class="container scrollspy" id="ingredient-content">
+        <div class="col s6 m8 l8 ingredient-container">
             <!-- INGREDIENT APPLICATION -->
             <div class="ingredient-header">
+                <div class="row">
+                    <h2>What's in your kitchen?</h2>
+                </div>
                 <div class="row">
                     <div class="col s12 m4 l4">
                         <div class="row">
@@ -75,7 +83,7 @@
                     <div class="col s12 m4 l4">
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="material-icons prefix">restaurant</i>
+                                <i class="material-icons prefix">local_dining</i>
                                 <input type="text" id="vegetable-search" class="autocomplete">
                                 <label for="autocomplete-input">Ingredient #2</label>
                             </div>
@@ -89,29 +97,14 @@
                                     <option id='health-option-2' value="1">vegan</option>
                                     <option id='health-option-3' value="2">vegetarian</option>
                                     <option id='health-option-4' value="3">gluten-free</option>
-                                    <option id='health-option-5' value="4">low-sodium</option>
-                                    <option id='health-option-6' value="5">egg-free</option>
-                                    <option id='health-option-7' value="6">dairy-free</option>
-                                    <option id='health-option-8' value="7">low-carb</option>
-                                    <option id='health-option-9' value="8">low-fat</option>
-                                    <option id='health-option-10' value="9">high-fiber</option>
-                                    <option id='health-option-11' value="10">high-protein</option>
-                                    <option id='health-option-12' value="11">alcohol-free</option>
-                                    <option id='health-option-13' value="12">crustacean-free</option>
-                                    <option id='health-option-14' value="13">kosher</option>
                                     <option id='health-option-15' value="14">paleo</option>
-                                    <option id='health-option-16' value="15">peanut-free</option>
-                                    <option id='health-option-17' value="16">shellfish-free</option>
-                                    <option id='health-option-18' value="17">wheat-free</option>
-                                    <option id='health-option-19' value="18">soy-free</option>
-                                    <option id='health-option-20' value="19">sugar-conscious</option>
-                                    <option id='health-option-21' value="20">red-meat-free</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button id = 'ingredient-search-button' class="waves-effect waves-light btn-large">IngrediFeed Me!</button>
+                <button id='ingredient-search-button' class="waves-effect waves-light btn-large z-depth-5">IngrediFeed
+                    Me!</button>
             </div>
             <div class="ingredient-body">
                 <!-- Card A -->
@@ -129,7 +122,8 @@
                         </ul>
                         <div>
                             <button id='recipe-url-0' class="waves-effect waves-light btn-small">See Full Recipe</button>
-                            <button id='ingredient-reveal-0' class="waves-effect waves-light btn-small activator">View Ingredients</button>
+                            <button id='ingredient-reveal-0' class="waves-effect waves-light btn-small activator">View
+                                Ingredients</button>
                         </div>
                     </div>
                     <div class="card-reveal">
@@ -154,7 +148,8 @@
                         </ul>
                         <div>
                             <button id='recipe-url-1' class="waves-effect waves-light btn-small">See Full Recipe</button>
-                            <button id='ingredient-reveal-1' class="waves-effect waves-light btn-small activator">View Ingredients</button>
+                            <button id='ingredient-reveal-1' class="waves-effect waves-light btn-small activator">View
+                                Ingredients</button>
                         </div>
                     </div>
                     <div class="card-reveal">
@@ -179,7 +174,8 @@
                         </ul>
                         <div>
                             <button id='recipe-url-2' class="waves-effect waves-light btn-small">See Full Recipe</button>
-                            <button id='ingredient-reveal-2' class="waves-effect waves-light btn-small activator">View Ingredients</button>
+                            <button id='ingredient-reveal-2' class="waves-effect waves-light btn-small activator">View
+                                Ingredients</button>
                         </div>
                     </div>
                     <div class="card-reveal">
@@ -201,69 +197,68 @@
         <div class="parallax"><img src="assets/images/pasta-basket.jpeg"></div>
     </div>
 
-    <div class="container">
+    <div class="container scrollspy" id="cuisine-content">
         <!-- TRENDING CUISINE CONTAINER -->
-        <div class="trending-cuisine-header">
-            <h2 id="cuisine-title">What cuisine are you feelin'?</h2>
-            <div class="col s12 m4 l4">
-                <div class="input-field col s12">
-                    <div class="row">
-                        <select multiple>
-                            <option value="" disabled selected>Cuisine Options</option>
-                            <option value="1">Japanese</option>
-                            <option value="2">Indian</option>
-                            <option value="3">Chinese</option>
-                            <option value="3">Italian</option>
-                        </select>
+        <div class="col s6 m8 l8 ingredient-container">
+            <div class="trending-cuisine-header">
+                <h2 id="cuisine-title">What cuisine are you feelin'?</h2>
+                <div class="col s12 m4 l4">
+                    <div class="row" id="cuisine-input-div">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">restaurant</i>
+                            <input type="text" id="cuisine-search" class="autocomplete">
+                            <label for="autocomplete-input">Cuisine</label>
+                        </div>
                     </div>
                 </div>
+                <button id='cuisine-search-button' class="waves-effect waves-light btn-large z-depth-5">Let's Eat!</button>
             </div>
-        </div>
-        <!-- TRENDING CUISINE BODY -->
-        <div class="ingredient-body">
-            <!-- Card A -->
-            <div class="card large ingredient-card" style="height: 100%;">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator ingredient-img" src="assets/images/italian.jpeg">
+            <!-- TRENDING CUISINE BODY -->
+            <div class="ingredient-body">
+                <!-- Card A -->
+                <div class="card large ingredient-card" style="height: 100%;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator ingredient-img" src="assets/images/italian.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
+                <!-- Card B -->
+                <div class="card large ingredient-card" style="height: 100%;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator ingredient-img" src="assets/images/japanese.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
                 </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">
-                        <h4>Recipe Name</h4>><i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-            <!-- Card B -->
-            <div class="card large ingredient-card" style="height: 100%;">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator ingredient-img" src="assets/images/japanese.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">
-                        <h4>Recipe Name</h4>><i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-            <!-- Card C -->
-            <div class="card large ingredient-card" style="height: 100%;">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator ingredient-img" src="assets/images/mexican.jpeg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">
-                        <h4>Recipe Name</h4>><i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                <!-- Card C -->
+                <div class="card large ingredient-card" style="height: 100%;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator ingredient-img" src="assets/images/mexican.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -272,6 +267,24 @@
     <!-- PARALLAX PHOTO #3 -->
     <div class="parallax-container">
         <div class="parallax"><img src="assets/images/red-black-cutting-board.jpeg"></div>
+    </div>
+
+    <div class="container scrollspy" id="favorites-content">
+        <!-- FAVOTIES CONTAINER -->
+        <div class="col s6 m8 l8 favorites-container">
+            <div class="favorites-header">
+                <h2 id="favorites-title">My Favorite Recipes</h2>
+            </div>
+            <!-- FAVORTIES BODY -->
+            <div class="favorites-body">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PARALLAX PHOTO #3 -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/recipes1.jpeg"></div>
     </div>
 
     <!-- FOOTER -->
