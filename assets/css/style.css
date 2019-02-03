@@ -1,11 +1,45 @@
 
+body {
+  background-color: black;
+}
+
+h1, h2, h5 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h5 {
+  font-size: 3em;
+}
+
+#and {
+  font-size: 10px;
+}
+
+#heading-container{
+  margin-top: 87px;
+  background-color: rgba(255, 255, 255, 0.092);
+}
+
 .parallax-container {
   min-height: 600px;
+}
+
+.parallax-image {
+  transform: translate3d(-50%, 734.42px, 0px);
 }
 
 #trending-cuisine-container {
   margin-top: 150px;
   margin-bottom: 150px;
+}
+
+.trending-cuisine-header {
+  text-align: center;
 }
 
 #trending-cuisine-body {
@@ -21,9 +55,15 @@
   justify-content: space-evenly
 }
 
-.ingredient-container {
-  margin-top: 50px;
+#cuisine-title {
+  margin-bottom: 50px;
+}
+
+.ingredient-container, .cuisine-container {
+  margin: 100px;
   padding: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 100px 10px powderblue;
 }
 
 .ingredient-header {
@@ -41,13 +81,21 @@
   margin: 10px;
 }
 
+#ingredient-search-button {
+  margin-bottom: 40px;
+}
+
 .link-container {
   text-align: center;
 }
 
-#placeholder-p {
-  letter-spacing: 3px;
-  border-top: 1px rgba(0, 0, 255, 0.633) solid;
+.cuisine-select-wrapper {
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
+#cuisine-search-button {
+  margin: 30px;
 }
 
 /* FOOTER*/
