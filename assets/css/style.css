@@ -106,6 +106,10 @@ footer {
   width: 100%;
   z-index: 10;
 }
+/* NAV */
+.nav-wrapper{
+  background-color:yellow;
+}
 
 .container {
   margin: 0 auto;
