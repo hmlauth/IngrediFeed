@@ -96,6 +96,10 @@ h5 {
 #cuisine-search-button {
   margin: 30px;
 }
+/* NAV */
+.nav-wrapper { 
+  background-color:yellow;
+}
 
 /* FOOTER*/
 footer {
