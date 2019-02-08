@@ -92,7 +92,7 @@ h5 {
 
 .cuisine-body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
