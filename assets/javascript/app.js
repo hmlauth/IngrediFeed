@@ -36,43 +36,57 @@ $(document).ready(function(){
 });
     
 //cuisine search function
-function cuisineSearch(response){
-  var response = JSON.parse(JSONresponse);
-  console.log(response);
+// function cuisineSearch(response){
+//   var response = JSON.parse(JSONresponse);
+//   console.log(response);
   
   //build each trending recipe
-  var random = Math.floor((Math.random()*9)-1)
-  for(var i=0;i<3;i++){
-      var title = $('<p>').text(response.recipes[random].title);
-      var recipeSource = $('<a>').text('View Full Recipe').attr('href', response.recipes[random].source_url);
-      var trendingPhoto = $('<img>').attr('src', response.recipes[random].image_url).attr('class','trending-recipe-photo');
-      var newTrendingRecipe = $('<div>').append(trendingPhoto);
-      $('#cuisine-field').append(title).append(newTrendingRecipe).append(recipeSource);
-      random ++
-  };
-};
+//   var random = Math.floor((Math.random()*9)-1)
+//   for(var i=0;i<3;i++){
+//       var title = $('<p>').text(response.recipes[random].title);
+//       var recipeSource = $('<a>').text('View Full Recipe').attr('href', response.recipes[random].source_url);
+//       var trendingPhoto = $('<img>').attr('src', response.recipes[random].image_url).attr('class','trending-recipe-photo');
+//       var newTrendingRecipe = $('<div>').append(trendingPhoto);
+//       $('#cuisine-field').append(title).append(newTrendingRecipe).append(recipeSource);
+//       random ++
+//   };
+// };
 
 //grab ingredient array from response
-function ingredients(response){
-  var result = [];
-  var ingredientsArray = response.hits[3].recipe.ingredients;
-  for (var i=0;i<ingredientsArray.length;i++){
-      result.push(ingredientsArray[i].text);
-  };
-  return result;
-};
-
-//pageload trending cuisine search
-// $.ajax({
-//     url:'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70',
-//     method: 'GET'
-// }).then(cuisineSearch(response));
+// function ingredients(response){
+//   var result = [];
+//   var ingredientsArray = response.hits[3].recipe.ingredients;
+//   for (var i=0;i<ingredientsArray.length;i++){
+//       result.push(ingredientsArray[i].text);
+//   };
+//   return result;
+// };
 
 //cuisine seach button event listener
 $('#cuisine-search-button').on('click', function(){
+  console.log('clicked')
   if($('#cuisine-search').val()===''){
       console.log('no input received');
+  } else {
+    //cuisine search
+    $.ajax({
+        url:'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70&q=' + $('#cuisine-search').val(),
+        method: 'GET'
+    }).then(function (JSONresponse){
+      var response = JSON.parse(JSONresponse);
+      console.log(response);
+      
+      //build each trending recipe
+      var random = Math.floor((Math.random()*9))
+      for(var i=0;i<3;i++){
+          $('#cuisine-title-' + i).text(response.recipes[random].title);
+          $('#cuisine-recipe-' + i).attr('href', response.recipes[random].source_url);
+          $('#cuisine-image-' + i).attr('src', response.recipes[random].image_url)    ;
+          random ++
+      };
+    });
   };
+  $('#cuisine-search-button').val("")
 });
 
 
