@@ -90,10 +90,11 @@ h5 {
   align-items: stretch;
 }
 
-.cuisine-body {
+.cuisine-body, #favorites-body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 #cuisine-title {

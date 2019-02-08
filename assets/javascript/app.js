@@ -35,23 +35,6 @@ $(document).ready(function(){
   });
 });
 
-//cuisine search function
-// function cuisineSearch(response){
-//   var response = JSON.parse(JSONresponse);
-//   console.log(response);
-  
-//   //build each trending recipe
-//   var random = Math.floor((Math.random()*9)-1);
-//   for(var i=0;i<3;i++){
-//       var title = $('<p>').text(response.recipes[random].title);
-//       var recipeSource = $('<a>').text('View Full Recipe').attr('href', response.recipes[random].source_url);
-//       var trendingPhoto = $('<img>').attr('src', response.recipes[random].image_url).attr('class','trending-recipe-photo');
-//       var newTrendingRecipe = $('<div>').append(trendingPhoto);
-//       $('#cuisine-field').append(title).append(newTrendingRecipe).append(recipeSource);
-//       random ++;
-//   };
-// };
-
 //grab ingredient array from response
 function ingredients(response){
   var result = [];
@@ -190,7 +173,7 @@ resetFavorites();
 //function to populate favorites
 function populateFavorites(array){
   for(var i=0;i<favorites.length;i++){
-    var buildFavoriteCard = '<div class="card favorite-card large ingredient-card" style="height: 100%;"> <div class="card-image waves-effect waves-block waves-light"> <img class="activator ingredient-img" src="' + array[i].photo +'"> </div> <div class="card-content"> <span class="card-title activator grey-text text-darken-4"><h4 id="card-2-title">' + array[i].title + '</h4></span> <button class="waves-effect waves-light btn-small"><a target="_blank" class="recipe-button-search" href="' + array[i].link + '" >See Full Recipe</a></button><button class="waves-effect waves-light btn-small"><a title="' + array[i].title + '" class="remove-recipe-button recipe-button-search">Remove Recipe</a></button></div> </div>'
+    var buildFavoriteCard = '<div class="card favorite-card large ingredient-card" style="height: 100%;"> <div class="card-image waves-effect waves-block waves-light"> <img class="activator ingredient-img" src="' + array[i].photo +'"> </div> <div class="card-content"> <span class="card-title activator grey-text text-darken-4"><h4 id="card-2-title">' + array[i].title + '</h4></span> <div class="button-class"><button class="waves-effect waves-light btn-small"><a target="_blank" class="recipe-button-search" href="' + array[i].link + '" >See Full Recipe</a></button><button class="waves-effect waves-light btn-small"><a title="' + array[i].title + '" class="remove-recipe-button recipe-button-search">Remove Recipe</a></button></div></div> </div>'
     $('#favorites-body').append(buildFavoriteCard);
   };
 };
