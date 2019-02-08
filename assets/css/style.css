@@ -132,7 +132,8 @@ footer {
     content: "• "; /* Insert content that looks like bullets */
 }
 
-.recipe-button-search{  
+.recipe-button-search, 
+.cuisine-button {  
   color:white
 }
 
