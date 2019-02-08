@@ -84,6 +84,10 @@ h5 {
   margin-bottom: 40px;
 }
 
+#cuisine-search-button{
+  margin: 0 auto;
+}
+
 .link-container {
   text-align: center;
 }
