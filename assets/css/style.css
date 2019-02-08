@@ -117,6 +117,35 @@ footer {
   max-width: 4000px;
   width: 90%;
 }
+
+#recipe-url-0,
+#recipe-url-1,
+#recipe-url-2,
+#save-recipe-0,
+#save-recipe-1,
+#save-recipe-2 {
+  color:white;
+}
+
+#popup-ingredients-0 li:before,
+#popup-ingredients-1 li:before,
+#popup-ingredients-2 li:before {
+    content: "• "; /* Insert content that looks like bullets */
+}
+
+.recipe-button-search{  
+  color:white
+}
+
+.favorite-card{
+  width: 31%;
+  display: inline-block;
+}
+
+.ingredient-start {
+  display: none;
+}
+
 @media only screen and (min-width: 601px) {
   .container {
     width: 85%;

@@ -64,7 +64,7 @@
     </div>
 
     <div class="container scrollspy" id="ingredient-content">
-        <div class="col s6 m8 l8 ingredient-container">
+        <div class="col s6 m10 l10 ingredient-container">
             <!-- INGREDIENT APPLICATION -->
             <div class="ingredient-header">
                 <div class="row">
@@ -93,11 +93,11 @@
                         <div class="input-field col s12">
                             <div class="row">
                                 <select id='health-options' multiple>
-                                    <option id='health-option-1' value="" disabled selected>Health Options</option>
-                                    <option id='health-option-2' value="1">vegan</option>
-                                    <option id='health-option-3' value="2">vegetarian</option>
-                                    <option id='health-option-4' value="3">gluten-free</option>
-                                    <option id='health-option-15' value="14">paleo</option>
+                                    <option id='health-option-0' value="" disabled selected>Health Options</option>
+                                    <option id='health-option-1' value="1">vegan</option>
+                                    <option id='health-option-2' value="2">vegetarian</option>
+                                    <option id='health-option-3' value="3">gluten-free</option>
+                                    <option id='health-option-4' value="4">paleo</option>
                                 </select>
                             </div>
                         </div>
@@ -114,23 +114,24 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
-                            <h4 id='card-0-title'>Recipe Name</h4>
+                            <h4 id='card-0-title' class="ingredient-start">Recipe Name</h4>
                         </span>
 
                         <ul id='ul-0'>
-                            <li id='serving-size-0'></li>
+                            <li id='servingSize0'></li>
                         </ul>
                         <div>
-                            <button id='recipe-url-0' class="waves-effect waves-light btn-small">See Full Recipe</button>
-                            <button id='ingredient-reveal-0' class="waves-effect waves-light btn-small activator">View
+                            <button class="ingredient-start waves-effect waves-light btn-small"><a id='recipe-url-0' >See Full Recipe</a></button>
+                            <button id='ingredient-reveal-0' class="ingredient-start waves-effect waves-light btn-small activator">View
                                 Ingredients</button>
+                            <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-0' >Save to Favorites</a></button>
                         </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
-                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                            <h4 id='popup-title-0'>Recipe Name</h4>><i class="material-icons right">close</i>
                         </span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <ul id='popup-ingredients-0'><strong>Ingredients</strong></ul>
                     </div>
                 </div>
                 <!-- Card B -->
@@ -140,23 +141,24 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
-                            <h4 id='card-1-title'>Recipe Name</h4>
+                            <h4 id='card-1-title' class="ingredient-start">Recipe Name</h4>
                         </span>
 
                         <ul id='ul-1'>
-                            <li id='serving-size-1'></li>
+                            <li id='servingSize1'></li>
                         </ul>
                         <div>
-                            <button id='recipe-url-1' class="waves-effect waves-light btn-small">See Full Recipe</button>
-                            <button id='ingredient-reveal-1' class="waves-effect waves-light btn-small activator">View
+                            <button class="ingredient-start waves-effect waves-light btn-small"><a id='recipe-url-1'>See Full Recipe</a></button>
+                            <button id='ingredient-reveal-1' class="ingredient-start waves-effect waves-light btn-small activator">View
                                 Ingredients</button>
+                            <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-1' >Save to Favorites</a></button>
                         </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
-                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                            <h4 id='popup-title-1'>Recipe Name</h4>><i class="material-icons right">close</i>
                         </span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <ul id='popup-ingredients-1'><strong>Ingredients</strong></ul>
                     </div>
                 </div>
                 <!-- Card C -->
@@ -166,23 +168,24 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
-                            <h4 id='card-2-title'>Recipe Name</h4>
+                            <h4 id='card-2-title' class="ingredient-start" >Recipe Name</h4>
                         </span>
 
                         <ul id='ul-2'>
-                            <li id='serving-size-2'></li>
+                            <li id='servingSize2'></li>
                         </ul>
                         <div>
-                            <button id='recipe-url-2' class="waves-effect waves-light btn-small">See Full Recipe</button>
-                            <button id='ingredient-reveal-2' class="waves-effect waves-light btn-small activator">View
+                            <button class="ingredient-start waves-effect waves-light btn-small"><a id='recipe-url-2' >See Full Recipe</a></button>
+                            <button id='ingredient-reveal-2' class="ingredient-start waves-effect waves-light btn-small activator">View
                                 Ingredients</button>
+                            <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-2'>Save to Favorites</a></button>
                         </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
-                            <h4>Recipe Name</h4>><i class="material-icons right">close</i>
+                            <h4 id='popup-title-2'>Recipe Name</h4>><i class="material-icons right">close</i>
                         </span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <ul id='popup-ingredients-2'><strong>Ingredients</strong></ul>
                     </div>
                 </div>
             </div>
@@ -276,7 +279,7 @@
                 <h2 id="favorites-title">My Favorite Recipes</h2>
             </div>
             <!-- FAVORTIES BODY -->
-            <div class="favorites-body">
+            <div id="favorites-body">
 
             </div>
         </div>
