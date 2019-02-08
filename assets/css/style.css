@@ -52,7 +52,7 @@ h5 {
 .cuisine-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 #cuisine-title {
@@ -73,6 +73,7 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
 }
 
 .ingredient-card {
@@ -158,5 +159,19 @@ footer {
 @media only screen and (min-width: 993px) {
   .container {
     width: 70%;
+  }
+}
+
+@media screen and (min-width: 733px) {
+  .tester {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .button-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
