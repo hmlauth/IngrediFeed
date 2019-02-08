@@ -16,10 +16,6 @@ h5 {
   font-size: 3em;
 }
 
-#and {
-  font-size: 10px;
-}
-
 #heading-container{
   margin-top: 87px;
   background-color: rgba(255, 255, 255, 0.092);
@@ -113,7 +109,7 @@ footer {
 }
 /* NAV */
 .nav-wrapper{
-  background-color:yellow;
+  background-color:black;
 }
 
 .container {
@@ -151,6 +147,10 @@ footer {
   display: none;
 }
 
+.ingredient-img {
+  height: 300px;
+}
+
 @media only screen and (min-width: 601px) {
   .container {
     width: 85%;
@@ -163,15 +163,20 @@ footer {
 }
 
 @media screen and (min-width: 733px) {
-  .tester {
+  .ingredient-body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    text-align: center;
   }
 
   .button-class {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .ingredient-img {
+    height: 600px;
   }
 }
