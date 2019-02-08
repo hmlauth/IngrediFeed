@@ -1,8 +1,53 @@
 
+/* body {
+  background-image: url("https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+} */
+
 body {
   background-color: black;
 }
 
+/* Nav Bar */
+.nav-wrapper {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.fa {
+  margin-right:5px;
+  width:50px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+ }
+ 
+ .fa:hover {
+  opacity: 0.7;
+ }
+ 
+ .fa-facebook {
+  background: #3B5998;
+  color: white;
+ }
+ 
+ .fa-youtube {
+  background: red;
+  color: white;
+ }
+ 
+ .fa-twitter {
+  background: #55ACEE;
+  color: white;
+ }
+ 
+ .fa-linkedin {
+  background:darkblue;
+  color:white;
+ }
+
+
+/* Body */
 h1, h2, h5 {
   font-family: 'Rock Salt', cursive;
   letter-spacing: 5px;
@@ -69,7 +114,7 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
+  text-align: center;
 }
 
 .ingredient-card {
@@ -93,7 +138,7 @@ h5 {
 footer {
   background-color: black;
   color: white;
-  padding: 30px 0px 30px 0px;
+  padding: 7px 0px 7px 0px;
   text-align: center;
   font-size: small;
   margin-top: 10px;
@@ -102,10 +147,6 @@ footer {
   bottom: 0;
   width: 100%;
   z-index: 10;
-}
-/* NAV */
-.nav-wrapper{
-  background-color:black;
 }
 
 .container {
@@ -146,32 +187,34 @@ footer {
   height: 300px;
 }
 
-@media only screen and (min-width: 601px) {
+.button-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* @media only screen and (max-width: 601px) {
   .container {
     width: 85%;
   }
 }
-@media only screen and (min-width: 993px) {
+@media only screen and (max-width: 993px) {
   .container {
     width: 70%;
   }
-}
+} */
 
-@media screen and (min-width: 733px) {
+@media (max-width: 733px) {
   .ingredient-body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    text-align: center;
-  }
-
-  .button-class {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    background-color: red
   }
 
   .ingredient-img {
     height: 600px;
   }
 }
+
