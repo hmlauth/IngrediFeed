@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
   // Materialize initialization for parallax
   $('.parallax').parallax();
   // Materialize initialize for drop down selection menu for health options
@@ -36,46 +36,46 @@ $(document).ready(function(){
 });
 
 //grab ingredient array from response
-function ingredients(response){
+function ingredients(response) {
   var result = [];
   var ingredientsArray = response.hits[3].recipe.ingredients;
-  for (var i=0;i<ingredientsArray.length;i++){
-      result.push(ingredientsArray[i].text);
+  for (var i = 0; i < ingredientsArray.length; i++) {
+    result.push(ingredientsArray[i].text);
   };
   return result;
 };
-    
+
 //hide cuisine search buttons on page load
 $('.cuisine-button-blue').css('display', 'none');
 
 //cuisine seach button event listener
-$('#cuisine-search-button').on('click', function(){
+$('#cuisine-search-button').on('click', function () {
   //show cuisine search buttons
   $('.cuisine-button-blue').css('display', 'block');
-  if($('#cuisine-search').val()===''){
-      console.log('no input received');
+  if ($('#cuisine-search').val() === '') {
+    console.log('no input received');
   } else {
     //cuisine search
     $.ajax({
-        url:'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70&q=' + $('#cuisine-search').val(),
-        method: 'GET'
-    }).then(function (JSONresponse){
+      url: 'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70&q=' + $('#cuisine-search').val(),
+      method: 'GET'
+    }).then(function (JSONresponse) {
       var response = JSON.parse(JSONresponse);
       console.log(response);
-      
+
       //build each recipe
-      var random = Math.floor((Math.random()*9));
-      for(var i=0;i<3;i++){
+      var random = Math.floor((Math.random() * 9));
+      for (var i = 0; i < 3; i++) {
         $('#cuisine-title-' + i).text(response.recipes[random].title);
         $('#cuisine-recipe-' + i).attr('href', response.recipes[random].source_url);
         $('#cuisine-image-' + i).attr('src', response.recipes[random].image_url);
-        
+
         //build favorites button attributes
         $('#save-cuisine-recipe-' + i).attr('link', response.recipes[random].source_url)
         $('#save-cuisine-recipe-' + i).attr('title', response.recipes[random].title)
-        $('#save-cuisine-recipe-' + i).attr('photo', response.recipes[random].image_url)  
-        
-        random ++
+        $('#save-cuisine-recipe-' + i).attr('photo', response.recipes[random].image_url)
+
+        random++
       };
     });
   };
@@ -84,39 +84,51 @@ $('#cuisine-search-button').on('click', function(){
 });
 
 //ingredient search listener
-$(document).on('click', '#ingredient-search-button', function(){
-  if($('#protein-search').val()!== "" || $('#vegetable-search').val()!== ""){
-    
+$(document).on('click', '#ingredient-search-button', function () {
+
+  // retrieve value of ingredient inputs
+  var proteinSearch = $("#protein-search").val().trim();
+  var vegetableSearch = $("#vegetable-search").val().trim();
+
+  //retrieve clicked health options
+  var healthOptionsArray = [];
+  var instance = M.FormSelect.getInstance($('select'));
+  var selectedBoxIndeces = instance.getSelectedValues();
+
+  // create function to grab selected health option values
+  function createHealthOptions(indeces) {
+    if (indeces[0] !== "" && indeces.length > 0) {
+      for (var i = 0; i < indeces.length; i++) {
+        healthOptionsArray.push($('[id="health-option-' + selectedBoxIndeces[i] + '"]').text());
+      };
+      healthOptionsArray = '&health=' + healthOptionsArray.join("&health=");
+    };
+  };
+  createHealthOptions(selectedBoxIndeces);
+
+  // Check if input is in input form
+  if (proteinSearch.length == 0 && vegetableSearch.length == 0 && healthOptionsArray.length === 0) {
+    $('#user-validation-notice').text("Please enter at least one ingredient or select a health option"); // This Segment Displays The Validation Rule For All Fields
+    proteinSearch.focus();
+    vegetableSearch.focus();
+    return false;
+
+  } else if (proteinSearch !== "" || vegetableSearch !== "" || healthOptionsArray.length > 0 ) {
+    // Clear p tag for user input validation
+    $('#user-validation-notice').text("");
+
     //clear old recipes
     $('#ul-0, #ul-1, #ul-2').empty();
 
-    var protein = $('#protein-search').val();
-    var vegetables = $('#vegetable-search').val();
-    
-    //retrieve clicked health options
-    var healthOptionsArray = [];
-    var instance = M.FormSelect.getInstance($('select'));
-    var selectedBoxIndeces = instance.getSelectedValues();
-
-    function createHealthOptions(indeces){
-      if(indeces[0] !== "" && indeces.length>0){
-        for(var i=0;i<indeces.length;i++){
-          healthOptionsArray.push($('[id="health-option-' + selectedBoxIndeces[i] + '"]').text());
-        };
-        healthOptionsArray = '&health=' + healthOptionsArray.join("&health=");     
-      };
-    };
-    createHealthOptions(selectedBoxIndeces);
-    
     $.ajax({
-        url:'https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=d6442f57&app_key=69127160173cd4569256538b60dfbc9c&q=' + protein + "," + vegetables + healthOptionsArray,
-        method:'GET'
-    }).then(function(response){
-      
+      url: 'https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=d6442f57&app_key=69127160173cd4569256538b60dfbc9c&q=' + proteinSearch + "," + vegetableSearch + healthOptionsArray,
+      method: 'GET'
+    }).then(function (response) {
+
       $('.ingredient-start').css('display', 'block');
 
-      var random = Math.floor((Math.random()*8));
-      for(var i=0;i<3;i++){
+      var random = Math.floor((Math.random() * 8));
+      for (var i = 0; i < 3; i++) {
 
         var thisHit = response.hits[random].recipe;
 
@@ -124,8 +136,8 @@ $(document).on('click', '#ingredient-search-button', function(){
         $('#card-' + i + '-img').attr('src', thisHit.image);
         $('#card-' + i + '-title').text(thisHit.label);
         $('#ul-' + i).append($('<li>').text('Serving size: ' + thisHit.yield));
-        $('#recipe-url-' + i).text("See Full Recipe").attr('href', thisHit.url).attr('target','_blank');
-        
+        $('#recipe-url-' + i).text("See Full Recipe").attr('href', thisHit.url).attr('target', '_blank');
+
         //add link, title and photo to 'save recipe' button
         $('#save-recipe-' + i).attr('link', thisHit.url);
         $('#save-recipe-' + i).attr('title', thisHit.label);
@@ -134,25 +146,25 @@ $(document).on('click', '#ingredient-search-button', function(){
         //Populate ingredients popup card
         ingredients(response);
         $('#popup-title-' + i).text(thisHit.label);
-        for(var j=0;j<thisHit.ingredients.length;j++){
-            $('#popup-ingredients-' + i).append($('<li class="ingredient">').text(thisHit.ingredients[j].text));
+        for (var j = 0; j < thisHit.ingredients.length; j++) {
+          $('#popup-ingredients-' + i).append($('<li class="ingredient">').text(thisHit.ingredients[j].text));
         };
 
         random++;
 
         //add in dietlabels
-        for(var j=0; j<thisHit.dietLabels.length;j++){
-            $('#ul-' + i).append($('<li>').text(thisHit.dietLabels[j]));
+        for (var j = 0; j < thisHit.dietLabels.length; j++) {
+          $('#ul-' + i).append($('<li>').text(thisHit.dietLabels[j]));
         };
 
         //add in healthlabels
-        for(var j=0;j<2;j++){
-            $('#ul-' + i).append($('<li>').text(thisHit.healthLabels[j]));
+        for (var j = 0; j < 2; j++) {
+          $('#ul-' + i).append($('<li>').text(thisHit.healthLabels[j]));
         };
         //reset input values
         $('#protein-search').val('');
         $('#vegetable-search').val('');
-      
+
       };
     });
   };
@@ -160,8 +172,8 @@ $(document).on('click', '#ingredient-search-button', function(){
 
 //Initialize favorites from storage
 var favorites;
-function resetFavorites(){
-  if(localStorage.getItem('favorites')===null || localStorage.getItem('favorites')===''){
+function resetFavorites() {
+  if (localStorage.getItem('favorites') === null || localStorage.getItem('favorites') === '') {
     favorites = [];
   } else {
     favorites = JSON.parse(localStorage.getItem('favorites'));
@@ -170,23 +182,23 @@ function resetFavorites(){
 resetFavorites();
 
 //function to populate favorites
-function populateFavorites(array){
-  for(var i=0;i<favorites.length;i++){
-    var buildFavoriteCard = '<div class="card favorite-card large ingredient-card" style="height: 100%;"> <div class="card-image waves-effect waves-block waves-light"> <img class="activator ingredient-img" src="' + array[i].photo +'"> </div> <div class="card-content"> <span class="card-title activator grey-text text-darken-4"><h4 id="card-2-title">' + array[i].title + '</h4></span> <div class="button-class"><button class="waves-effect waves-light btn-small"><a target="_blank" class="recipe-button-search" href="' + array[i].link + '" >See Full Recipe</a></button><button class="waves-effect waves-light btn-small"><a title="' + array[i].title + '" class="remove-recipe-button recipe-button-search">Remove Recipe</a></button></div></div> </div>'
+function populateFavorites(array) {
+  for (var i = 0; i < favorites.length; i++) {
+    var buildFavoriteCard = '<div class="card favorite-card large ingredient-card" style="height: 100%;"> <div class="card-image waves-effect waves-block waves-light"> <img class="activator ingredient-img" src="' + array[i].photo + '"> </div> <div class="card-content"> <span class="card-title activator grey-text text-darken-4"><h4 id="card-2-title">' + array[i].title + '</h4></span> <div class="button-class"><button class="waves-effect waves-light btn-small"><a target="_blank" class="recipe-button-search" href="' + array[i].link + '" >See Full Recipe</a></button><button class="waves-effect waves-light btn-small"><a title="' + array[i].title + '" class="remove-recipe-button recipe-button-search">Remove Recipe</a></button></div></div> </div>'
     $('#favorites-body').append(buildFavoriteCard);
   };
 };
 populateFavorites(favorites);
 
 //function to check if recipe is already in favorites
-function checkIfinFavorites(array, newObject){
+function checkIfinFavorites(array, newObject) {
   var found = false;
-  for(var i=0; i<array.length;i++){
-    if(array[i].link === newObject.link){
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].link === newObject.link) {
       found = true;
     };
   };
-  if(!found){
+  if (!found) {
     array.push(newObject);
     return array;
   };
@@ -194,7 +206,7 @@ function checkIfinFavorites(array, newObject){
 
 
 //save to favorites
-$('.save-recipe').on('click', function(){
+$('.save-recipe').on('click', function () {
   $('#favorites-body').empty();
   var newSavedObject = {
     title: this.firstChild.getAttribute('title'),
@@ -202,17 +214,17 @@ $('.save-recipe').on('click', function(){
     link: this.firstChild.getAttribute('link')
   };
   //check if recipe is already in favorites
-  checkIfinFavorites(favorites, newSavedObject) ; 
+  checkIfinFavorites(favorites, newSavedObject);
   localStorage.setItem('favorites', JSON.stringify(favorites));
   populateFavorites(favorites);
 });
 
 //remove buton from favorites
-$(document).on('click', '.recipe-button-search', function(){
+$(document).on('click', '.recipe-button-search', function () {
   $('#favorites-body').empty();
   var newArray = [];
-  for(var i=0;i<favorites.length;i++){
-    if(favorites[i].title !== $(this).attr('title')){
+  for (var i = 0; i < favorites.length; i++) {
+    if (favorites[i].title !== $(this).attr('title')) {
       newArray.push(favorites[i]);
     };
   };
