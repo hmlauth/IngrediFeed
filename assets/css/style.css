@@ -97,7 +97,7 @@ h5 {
   align-items: stretch;
 }
 
-.cuisine-body, #favorites-body {
+.cuisine-body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -144,6 +144,12 @@ h5 {
 
 #cuisine-search-button {
   margin: 30px;
+}
+
+#favorites-content {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* FOOTER*/
