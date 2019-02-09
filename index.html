@@ -16,23 +16,23 @@
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <!-- Google Icons Link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 
 <body>
     <!-- NAVIGATION -->
-    <nav class="black" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo"><i class="material-icons prefix">restaurant</i></a>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><i class="material-icons">copyright</i>IngrediFeed</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Links</a></li>
+                <li><a href="#" class="fa fa-facebook"></a>
+                <li><a href="#" class="fa fa-twitter"></a>
+                <li><a href="#" class="fa fa-youtube"></a>
+                <li><a href="#" class="fa fa-linkedin"></a>
             </ul>
-
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
     </nav>
 
@@ -48,8 +48,8 @@
                         have!</h5>
                 </div>
                 <div class="row center">
-                    <a href="#cuisine-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Cuisine</a>
                     <a href="#ingredient-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Ingredients</a>
+                    <a href="#cuisine-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Cuisine</a>
                     <a href="#favorites-content" class="btn-large waves-effect waves-light teal lighten-1 header-button">Favorites</a>
                 </div>
                 <br><br>
@@ -128,13 +128,22 @@
                                 Ingredients</button>
                             <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-0'>Save
                                     to Favorites</a></button>
+                        <div>
+                            <div class='button-class'>
+                                <button class="ingredient-start waves-effect waves-light btn-small"><a id='recipe-url-0'>See
+                                        Full Recipe</a></button>
+                                <button id='ingredient-reveal-0' class="ingredient-start waves-effect waves-light btn-small activator">View
+                                    Ingredients</button>
+                                <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-0'>Save
+                                        to Favorites</a></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">
-                            <h4 id='popup-title-0'>Recipe Name</h4>><i class="material-icons right">close</i>
-                        </span>
-                        <ul id='popup-ingredients-0'><strong>Ingredients</strong></ul>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">
+                                <h4 id='popup-title-0'>Recipe Name</h4>><i class="material-icons right">close</i>
+                            </span>
+                            <ul id='popup-ingredients-0'><strong>Ingredients</strong></ul>
+                        </div>
                     </div>
                 </div>
 
@@ -158,13 +167,23 @@
                                 Ingredients</button>
                             <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-1'>Save
                                     to Favorites</a></button>
+                        <div>
+                            <div class='button-class'>
+                                <button class="ingredient-start waves-effect waves-light btn-small"><a id='recipe-url-1'>See
+                                        Full Recipe</a></button>
+
+                                <button id='ingredient-reveal-1' class="ingredient-start waves-effect waves-light btn-small activator">View
+                                    Ingredients</button>
+                                <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-1'>Save
+                                        to Favorites</a></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">
-                            <h4 id='popup-title-1'>Recipe Name</h4>><i class="material-icons right">close</i>
-                        </span>
-                        <ul id='popup-ingredients-1'><strong>Ingredients</strong></ul>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">
+                                <h4 id='popup-title-1'>Recipe Name</h4>><i class="material-icons right">close</i>
+                            </span>
+                            <ul id='popup-ingredients-1'><strong>Ingredients</strong></ul>
+                        </div>
                     </div>
                 </div>
                 <!-- Card C -->
@@ -187,20 +206,29 @@
                                 Ingredients</button>
                             <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-2'>Save
                                     to Favorites</a></button>
+
+                        <div>
+
+                            <div class='button-class'>
+                                <button class="ingredient-start waves-effect waves-light btn-small"><a id='recipe-url-2'>See
+                                        Full Recipe</a></button>
+
+                                <button id='ingredient-reveal-2' class="ingredient-start waves-effect waves-light btn-small activator">View
+                                    Ingredients</button>
+                                <button class="ingredient-start waves-effect waves-light save-recipe btn-small"><a id='save-recipe-2'>Save
+                                        to Favorites</a></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">
-                            <h4 id='popup-title-2'>Recipe Name</h4>><i class="material-icons right">close</i>
-                        </span>
-                        <ul id='popup-ingredients-2'><strong>Ingredients</strong></ul>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">
+                                <h4 id='popup-title-2'>Recipe Name</h4>><i class="material-icons right">close</i>
+                            </span>
+                            <ul id='popup-ingredients-2'><strong>Ingredients</strong></ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
     </div>
 
 
@@ -214,9 +242,9 @@
         <div class="col s6 m8 l8 ingredient-container">
             <div class="trending-cuisine-header">
                 <h2 id="cuisine-title">What cuisine are you feelin'?</h2>
-                <div class="col s12 m4 l4">
-                    <div class="row" id="cuisine-input-div">
-                        <div class="input-field col s12">
+                <div class="row">
+                    <div class="col s8 offset-s2 m6 offset-m3 l6 offset-l3">
+                        <div class="input-field">
                             <i class="material-icons prefix">restaurant</i>
                             <input type="text" id="cuisine-search" class="autocomplete">
                             <label for="autocomplete-input">Cuisine</label>
@@ -228,7 +256,7 @@
             </div>
 
             <!-- TRENDING CUISINE BODY -->
-            <div class="ingredient-body">
+            <div class="cuisine-body">
                 <!-- Card A -->
                 <div class="card large ingredient-card" style="height: 100%;">
                     <div class="card-image waves-effect waves-block waves-light">
@@ -238,6 +266,12 @@
                         <span class="card-title activator grey-text text-darken-4">
                             <h4 id='cuisine-title-0'></h4>
                         </span>
+                        <div class='button-class'>
+                            <button class="cuisine-button-blue waves-effect waves-light btn-large z-depth-5"><a target='_blank'
+                                    class='cuisine-button' id='cuisine-recipe-0'>Search Full Recipe</a></button>
+                            <button class="cuisine-button-blue waves-effect waves-light save-recipe btn-large z-depth-5"><a
+                                    id='save-cuisine-recipe-0' class='cuisine-button'>Save to Favorites</a></button>
+                        </div>
                     </div>
                     <div class='button-class'>
                         <button class="cuisine-button-blue waves-effect waves-light btn-large z-depth-5"><a target='_blank'
@@ -255,6 +289,13 @@
                         <span class="card-title activator grey-text text-darken-4">
                             <h4 id='cuisine-title-1'></h4>
                         </span>
+                        <div class='button-class'>
+                            <button class="cuisine-button-blue waves-effect waves-light btn-large z-depth-5"><a target='_blank'
+                                    class='cuisine-button' id='cuisinerecipe-1'>Search Full
+                                    Recipe</a></button>
+                            <button class="cuisine-button-blue waves-effect waves-light save-recipe btn-large z-depth-5"><a
+                                    id='save-cuisine-recipe-1' class='cuisine-button'>Save to Favorites</a></button>
+                        </div>
                     </div>
                     <div class='button-class'>
                         <button class="cuisine-button-blue waves-effect waves-light btn-large z-depth-5"><a target='_blank'
@@ -272,6 +313,13 @@
                         <span class="card-title activator grey-text text-darken-4">
                             <h4 id='cuisine-title-2'></h4>
                         </span>
+                        <div class='button-class'>
+                            <button class="cuisine-button-blue waves-effect waves-light btn-large z-depth-5"><a target='_blank'
+                                    class='cuisine-button' id='cuisine-recipe-2'>Search
+                                    Full Recipe</a></button>
+                            <button class="cuisine-button-blue waves-effect waves-light save-recipe btn-large z-depth-5"><a
+                                    id='save-cuisine-recipe-2' class='cuisine-button'>Save to Favorites</a></button>
+                        </div>
                     </div>
                     <div class='button-class'>
                         <button class="cuisine-button-blue waves-effect waves-light btn-large z-depth-5"><a target='_blank'
@@ -282,6 +330,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- PARALLAX PHOTO #3 -->

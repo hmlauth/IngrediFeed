@@ -35,24 +35,6 @@ $(document).ready(function(){
   });
 });
 
-
-//cuisine search function
-// function cuisineSearch(response){
-//   var response = JSON.parse(JSONresponse);
-//   console.log(response);
-  
-//   //build each trending recipe
-//   var random = Math.floor((Math.random()*9)-1);
-//   for(var i=0;i<3;i++){
-//       var title = $('<p>').text(response.recipes[random].title);
-//       var recipeSource = $('<a>').text('View Full Recipe').attr('href', response.recipes[random].source_url);
-//       var trendingPhoto = $('<img>').attr('src', response.recipes[random].image_url).attr('class','trending-recipe-photo');
-//       var newTrendingRecipe = $('<div>').append(trendingPhoto);
-//       $('#cuisine-field').append(title).append(newTrendingRecipe).append(recipeSource);
-//       random ++;
-//   };
-// };
-
 //grab ingredient array from response
 function ingredients(response){
   var result = [];
