@@ -35,6 +35,7 @@ $(document).ready(function(){
   });
 });
 
+
 //cuisine search function
 // function cuisineSearch(response){
 //   var response = JSON.parse(JSONresponse);
@@ -99,7 +100,6 @@ $('#cuisine-search-button').on('click', function(){
   //reset cuisine input field
   $('#cuisine-search-button').val("");
 });
-
 
 //ingredient search listener
 $(document).on('click', '#ingredient-search-button', function(){
