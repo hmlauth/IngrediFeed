@@ -190,7 +190,7 @@ resetFavorites();
 //function to populate favorites
 function populateFavorites(array){
   for(var i=0;i<favorites.length;i++){
-    var buildFavoriteCard = '<div class="card favorite-card large ingredient-card" style="height: 100%;"> <div class="card-image waves-effect waves-block waves-light"> <img class="activator ingredient-img" src="' + array[i].photo +'"> </div> <div class="card-content"> <span class="card-title activator grey-text text-darken-4"><h4 id="card-2-title">' + array[i].title + '</h4></span> <button class="waves-effect waves-light btn-small"><a target="_blank" class="recipe-button-search" href="' + array[i].link + '" >See Full Recipe</a></button><button class="waves-effect waves-light btn-small"><a title="' + array[i].title + '" class="remove-recipe-button recipe-button-search">Remove Recipe</a></button></div> </div>'
+    var buildFavoriteCard = '<div class="card favorite-card large ingredient-card" style="height: 100%;"> <div class="card-image waves-effect waves-block waves-light"> <img class="activator ingredient-img" src="' + array[i].photo +'"> </div> <div class="card-content"> <span class="card-title activator grey-text text-darken-4"><h4 id="card-2-title">' + array[i].title + '</h4></span> <div class="button-class"><button class="waves-effect waves-light btn-small"><a target="_blank" class="recipe-button-search" href="' + array[i].link + '" >See Full Recipe</a></button><button class="waves-effect waves-light btn-small"><a title="' + array[i].title + '" class="remove-recipe-button recipe-button-search">Remove Recipe</a></button></div></div> </div>'
     $('#favorites-body').append(buildFavoriteCard);
   };
 };
