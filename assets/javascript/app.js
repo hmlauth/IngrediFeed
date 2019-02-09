@@ -83,7 +83,6 @@ $('#cuisine-search-button').on('click', function(){
   $('#cuisine-search-button').val("");
 });
 
-
 //ingredient search listener
 $(document).on('click', '#ingredient-search-button', function(){
   if($('#protein-search').val()!== "" || $('#vegetable-search').val()!== ""){

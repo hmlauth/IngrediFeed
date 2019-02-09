@@ -61,6 +61,17 @@ h5 {
   font-size: 3em;
 }
 
+.card-content {
+  text-align: center;
+}
+
+.button-class {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
 #heading-container{
   margin-top: 87px;
   background-color: rgba(255, 255, 255, 0.092);
@@ -204,6 +215,7 @@ footer {
     width: 85%;
   }
 }
+
 @media only screen and (max-width: 993px) {
   .container {
     width: 70%;
@@ -216,7 +228,6 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: red
   }
 
   .ingredient-img {
