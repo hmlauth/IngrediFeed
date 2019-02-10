@@ -68,6 +68,11 @@ h5 {
   padding: 10px;
 }
 
+#ingredient-validation, #cuisine-validation {
+  color: rgb(250, 74, 103);
+  font-style: italic;
+}
+
 #heading-container{
   margin-top: 87px;
   background-color: rgba(255, 255, 255, 0.092);
@@ -152,6 +157,8 @@ h5 {
   flex-wrap: wrap;
 }
 
+
+
 /* FOOTER*/
 footer {
   background-color: black;
@@ -206,28 +213,22 @@ footer {
   height: 300px;
 }
 
-.button-class {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#ingredient-validation, #cuisine-validation {
-  color: rgb(250, 74, 103);
-  font-style: italic;
-}
-
-/* @media only screen and (max-width: 601px) {
-  .container {
-    width: 85%;
+@media screen and (max-width: 960px) {
+  .ingredient-body, #favorites-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
   }
-}
 
-@media only screen and (max-width: 993px) {
-  .container {
-    width: 70%;
+  .favorite-card {
+    width: 100%;
   }
-} */
+  
+  .button-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 @media (max-width: 733px) {
   .ingredient-body {
@@ -238,7 +239,6 @@ footer {
   }
 
   .ingredient-img {
-    height: 600px;
+    height: 400px;
   }
 }
-
