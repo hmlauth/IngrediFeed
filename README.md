@@ -40,12 +40,16 @@ For font we leaned toward a more rustic and light-hearted font, reminiscent to t
 
 ## Back End
 ### APIs
-1. Food2Fork
-2. Edamam
+1. Food2Fork: https://www.food2fork.com/about/api
+2. Edamam: https://developer.edamam.com/
 
 Other Features include:
 - Data Persistence (i.e. localStorage) for the Favorites section
 - Event Delegation for on click events
 
+## Opportunities for Improvement
+- Fix card height so height of each card stays uniform.
+- Create social media sharing ability without jQuery plugin.
+- Create Login Page along with user authentication so each user can have their own account.
 ______________________________________________________________________________________________________________________________________
 **Link to study (2000 Iyendar and Lepper): https://faculty.washington.edu/jdb/345/345%20Articles/Iyengar%20%26%20Lepper%20(2000).pdf
