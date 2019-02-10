@@ -51,6 +51,7 @@ Other Features include:
 
 ## Opportunities for Improvement
 - Ensure app is responsive across all media screens.
+- Include user input validation that checks if input is spelled correctly and/or not jibberish. 
 - Fix card height so height of each card stays uniform.
 - Create social media sharing ability without jQuery plugin.
 - Create Login Page along with user authentication so each user can have their own account.
