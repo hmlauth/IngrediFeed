@@ -1,6 +1,6 @@
 # Recipe-App
 Make an easy choice and feel satisfied with it! This application calls on two APIs by querying either the ingredients in your kitchen and health restrictions or the cuisine of your choice to then deliver three recipe options. If you love it, save it to your favorites!
-#### Video Demonstration: https://drive.google.com/file/d/1o_AyfU9Df1AagNq2T8Du4Q1WR9QuIuOJ/view
+#### Video Demonstration: 
 #### Link to App: https://hmlauth.github.io/IngrediFeed/
 
 <h1 align="center">Our Origin Story</h1>
