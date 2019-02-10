@@ -213,6 +213,16 @@ footer {
   height: 300px;
 }
 
+.back-top-button {
+  text-align: center;
+  color: darkgrey;
+}
+
+.back-top-button:hover {
+  text-align: center;
+  color: turquoise;
+}
+
 @media only screen and (max-width: 960px) {
   
   .ingredient-body, .cuisine-body, #favorites-body {
