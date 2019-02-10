@@ -8,6 +8,10 @@ body {
   background-color: black;
 }
 
+.BEShare {
+  color: black;
+}
+
 .fa {
   margin-right:5px;
   width:50px;
@@ -27,11 +31,11 @@ body {
   color: white;
  }
  
- .fa-youtube {
+ .fa-google {
   background: red;
   color: white;
  }
- 
+
  .fa-twitter {
   background: #55ACEE;
   color: white;
