@@ -5,7 +5,7 @@ Make an easy choice and feel satisfied with it! This application calls on two AP
 <p align="center">We all love food</br>
 + </br>
 We all struggle figuring out what we want to eat and this has become harder with more choices than ever</br>
-("Decision Paralysis" is real people!(</br>
+("Decision Paralysis" is real people!**)</br>
 +</br>
 Find two APIs that have enough interesting information to use for a decent website </br>(and are also not a complete pain-in-the-a$$ to work with)</br>
 +</br>
@@ -48,3 +48,4 @@ Other Features include:
 - Event Delegation for on click events
 
 
+**Link to study (2000 Iyendar and Lepper): https://faculty.washington.edu/jdb/345/345%20Articles/Iyengar%20%26%20Lepper%20(2000).pdf
