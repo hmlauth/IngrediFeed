@@ -212,6 +212,11 @@ footer {
   justify-content: center;
 }
 
+#ingredient-validation, #cuisine-validation {
+  color: rgb(250, 74, 103);
+  font-style: italic;
+}
+
 /* @media only screen and (max-width: 601px) {
   .container {
     width: 85%;
