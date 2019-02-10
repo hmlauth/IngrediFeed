@@ -212,7 +212,7 @@ footer {
   justify-content: center;
 }
 
-#user-validation-notice {
+#ingredient-validation, #cuisine-validation {
   color: rgb(250, 74, 103);
   font-style: italic;
 }

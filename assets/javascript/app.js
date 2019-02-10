@@ -50,14 +50,19 @@ $('.cuisine-button-blue').css('display', 'none');
 
 //cuisine seach button event listener
 $('#cuisine-search-button').on('click', function () {
-  //show cuisine search buttons
-  $('.cuisine-button-blue').css('display', 'block');
-  if ($('#cuisine-search').val() === '') {
-    console.log('no input received');
+
+  var cuisineSearch = $('#cuisine-search').val().trim();
+
+  // check for input from user
+  if (cuisineSearch.length == 0) {
+    $("#cuisine-validation").text("* Please enter your cuisine of choice * ");
+    cuisineSearch.focus();
+    return false;
+
   } else {
     //cuisine search
     $.ajax({
-      url: 'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70&q=' + $('#cuisine-search').val(),
+      url: 'https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=f4f40279aca7dd14a4df19d4902cae70&q=' + cuisineSearch,
       method: 'GET'
     }).then(function (JSONresponse) {
       var response = JSON.parse(JSONresponse);
@@ -75,12 +80,15 @@ $('#cuisine-search-button').on('click', function () {
         $('#save-cuisine-recipe-' + i).attr('title', response.recipes[random].title)
         $('#save-cuisine-recipe-' + i).attr('photo', response.recipes[random].image_url)
 
+        //show cuisine search buttons
+        $('.cuisine-button-blue').css('display', 'block');
+
         random++
       };
     });
   };
   //reset cuisine input field
-  $('#cuisine-search-button').val("");
+  $('#cuisine-search').val("");
 });
 
 //ingredient search listener
@@ -108,14 +116,14 @@ $(document).on('click', '#ingredient-search-button', function () {
 
   // Check if input is in input form
   if (proteinSearch.length == 0 && vegetableSearch.length == 0 && healthOptionsArray.length === 0) {
-    $('#user-validation-notice').text("Please enter at least one ingredient or select a health option"); // This Segment Displays The Validation Rule For All Fields
+    $('#ingredient-validation').text("Please enter at least one ingredient or select a health option"); // This Segment Displays The Validation Rule For All Fields
     proteinSearch.focus();
     vegetableSearch.focus();
     return false;
 
-  } else if (proteinSearch !== "" || vegetableSearch !== "" || healthOptionsArray.length > 0 ) {
+  } else if (proteinSearch !== "" || vegetableSearch !== "" || healthOptionsArray.length > 0) {
     // Clear p tag for user input validation
-    $('#user-validation-notice').text("");
+    $('#ingredient-validation').text("");
 
     //clear old recipes
     $('#ul-0, #ul-1, #ul-2').empty();
