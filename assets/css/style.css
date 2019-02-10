@@ -213,9 +213,11 @@ footer {
   height: 300px;
 }
 
-@media screen and (max-width: 960px) {
-  .ingredient-body, #favorites-body {
+@media only screen and (max-width: 960px) {
+  
+  .ingredient-body, .cuisine-body, #favorites-body {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
@@ -230,17 +232,14 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-}
-
-@media screen and (max-width: 733px) {
-  .ingredient-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
 
   .ingredient-img {
     height: 400px;
   }
+
 }
+
+
+/* @media screen and (max-width: 733px) { 
+
+} */
