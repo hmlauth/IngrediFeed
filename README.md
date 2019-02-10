@@ -8,6 +8,9 @@ We all struggle figuring out what we want to eat and this has become harder with
 ("Decision Paralysis" is real people!(</br>
 +</br>
 Find two APIs that have enough interesting information to use for a decent website </br>(and are also not a complete pain-in-the-a$$ to work with)</br>
++</br>
+Brainstorming text sesh with friends and family getting weird (*creative) over potential app names</br>
+(<em>Runner Up: PantryRaid</em>)</br>
 =</br>
 <em><strong>IngrediFeed</strong></em></br> 
 <em>An app designed to facilitate the decision-making process and increase your satisfaction with your choice!</em></br>
