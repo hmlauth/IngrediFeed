@@ -3,6 +3,47 @@ body {
   background-color: black;
 }
 
+/* Nav Bar */
+.nav-wrapper {
+  background-color: black;
+}
+
+.fa {
+  margin-right:5px;
+  width:50px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+ }
+ 
+ .fa:hover {
+  opacity: 0.7;
+ }
+ 
+ .fa-facebook {
+  background: #3B5998;
+  color: white;
+ }
+ 
+ .fa-youtube {
+  background: red;
+  color: white;
+ }
+ 
+ .fa-twitter {
+  background: #55ACEE;
+  color: white;
+ }
+ 
+ .fa-linkedin {
+  background:darkblue;
+  color:white;
+ }
+
+
+/* Body */
 h1, h2, h5 {
   font-family: 'Rock Salt', cursive;
   letter-spacing: 5px;
@@ -14,6 +55,22 @@ h1 {
 
 h5 {
   font-size: 3em;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.button-class {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#ingredient-validation, #cuisine-validation {
+  color: rgb(250, 74, 103);
+  font-style: italic;
 }
 
 #heading-container{
@@ -47,8 +104,9 @@ h5 {
 
 .cuisine-body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 #cuisine-title {
@@ -69,7 +127,7 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
+  text-align: center;
 }
 
 .ingredient-card {
@@ -81,6 +139,10 @@ h5 {
   margin-bottom: 40px;
 }
 
+#cuisine-search-button{
+  margin: 0 auto;
+}
+
 .link-container {
   text-align: center;
 }
@@ -89,11 +151,19 @@ h5 {
   margin: 30px;
 }
 
+#favorites-content {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
 /* FOOTER*/
 footer {
   background-color: black;
   color: white;
-  padding: 30px 0px 30px 0px;
+  padding: 7px 0px 7px 0px;
   text-align: center;
   font-size: small;
   margin-top: 10px;
@@ -102,10 +172,6 @@ footer {
   bottom: 0;
   width: 100%;
   z-index: 10;
-}
-/* NAV */
-.nav-wrapper{
-  background-color:black;
 }
 
 .container {
@@ -129,7 +195,8 @@ footer {
     content: "• "; /* Insert content that looks like bullets */
 }
 
-.recipe-button-search{  
+.recipe-button-search, 
+.cuisine-button {  
   color:white
 }
 
@@ -162,13 +229,16 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+@media (max-width: 733px) {
+  .ingredient-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .ingredient-img {
     height: 400px;
   }
-}
-
-@media screen and (max-width: 840px) {
-
 }
