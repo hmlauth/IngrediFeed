@@ -133,7 +133,7 @@ footer {
   color:white
 }
 
-.favorite-card{
+.favorite-card {
   width: 31%;
   display: inline-block;
 }
@@ -146,25 +146,18 @@ footer {
   height: 300px;
 }
 
-@media only screen and (min-width: 601px) {
-  .container {
-    width: 85%;
-  }
-}
-@media only screen and (min-width: 993px) {
-  .container {
-    width: 70%;
-  }
-}
-
 @media screen and (max-width: 960px) {
-  .ingredient-body {
+  .ingredient-body, #favorites-body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
   }
 
+  .favorite-card {
+    width: 100%;
+  }
+  
   .button-class {
     display: flex;
     flex-direction: column;
@@ -172,6 +165,10 @@ footer {
   }
 
   .ingredient-img {
-    height: 600px;
+    height: 400px;
   }
+}
+
+@media screen and (max-width: 840px) {
+
 }
