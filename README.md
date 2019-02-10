@@ -47,5 +47,5 @@ Other Features include:
 - Data Persistence (i.e. localStorage) for the Favorites section
 - Event Delegation for on click events
 
-
+______________________________________________________________________________________________________________________________________
 **Link to study (2000 Iyendar and Lepper): https://faculty.washington.edu/jdb/345/345%20Articles/Iyengar%20%26%20Lepper%20(2000).pdf
