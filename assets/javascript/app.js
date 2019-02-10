@@ -89,6 +89,7 @@ $('#cuisine-search-button').on('click', function () {
   };
   //reset cuisine input field
   $('#cuisine-search').val("");
+  $("#cuisine-validation").text("");
 });
 
 //ingredient search listener
