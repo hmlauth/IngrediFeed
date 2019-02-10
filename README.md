@@ -13,7 +13,7 @@ Brainstorming text sesh with friends and family getting weird (*creative) over p
 (<em>Runner Up: PantryRaid</em>)</br>
 =</br>
 <em><strong>IngrediFeed</strong></em></br> 
-<em>An app designed to facilitate the decision-making process and increase your satisfaction with your choice!</em></br>
+<em>An app designed to facilitate the decision-making process and increase satisfaction with your choice!</em></br>
 </p>
 
 ## Front End
