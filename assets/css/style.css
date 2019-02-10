@@ -229,8 +229,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
 
-@media (max-width: 733px) {
+@media screen and (max-width: 733px) {
   .ingredient-body {
     display: flex;
     flex-direction: column;
