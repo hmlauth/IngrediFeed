@@ -1,0 +1,26 @@
+{
+  "name": "@brandextract/jquery-beshare",
+  "version": "0.2.0",
+  "description": "Simple share tool from BrandExtract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrandExtract/jQuery-BEShare.git"
+  },
+  "author": "BrandExtract",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sntran/jQuery-BEShare/issues"
+  },
+  "homepage": "https://github.com/BrandExtract/jQuery-BEShare",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
