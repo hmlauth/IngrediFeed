@@ -1,5 +1,5 @@
 # Recipe-App
-Make an easy choice from three recipe options based on either the ingredients in your kitchen, health restrictions, and/or the cuisine of your desire, and feel satisfied with your choice! This application calls on two different APIs utilizing your input to deliver desired recipes.
+Make an easy choice and feel satisfied with it! This application calls on two APIs by querying either the ingredients in your kitchen and health restrictions or the cuisine of your choice to then deliver three recipe options. If you love it, save it to your favorites!
 
 <h1 align="center">Our Origin Story</h1>
 <p align="center">We all love food</br>
@@ -39,4 +39,9 @@ For font we leaned toward a more rustic and light-hearted font, reminiscent to t
 ### APIs
 1. Food2Fork
 2. Edamam
+
+Other Features include:
+- Data Persistence (i.e. localStorage) for the Favorites section
+- Event Delegation for on click events
+
 
