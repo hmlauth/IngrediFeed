@@ -1,5 +1,5 @@
 # Recipe-App
-Make an easy choice from three recipe options based on either the ingredients in your kitchen, health restrictions, and/or the cuisine of your desire, and feel satisfied with your choice! This application calls on two different APIs utlizing your unput to deliver desired recipes. Design primarily by Materialize.
+Make an easy choice from three recipe options based on either the ingredients in your kitchen, health restrictions, and/or the cuisine of your desire, and feel satisfied with your choice! This application calls on two different APIs utlizing your input to deliver desired recipes.
 
 <h1 align="center">Our Origin Story</h1>
 <p align="center">We all love food</br>
