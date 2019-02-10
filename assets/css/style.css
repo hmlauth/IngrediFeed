@@ -157,7 +157,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 733px) {
+@media screen and (max-width: 960px) {
   .ingredient-body {
     display: flex;
     flex-direction: column;
