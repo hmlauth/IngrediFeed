@@ -227,20 +227,6 @@ footer {
   color: turquoise;
 }
 
-@media only screen and (max-width: 960px) {
-  
-  .ingredient-body, .cuisine-body, #favorites-body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-  }
-
-  .favorite-card {
-    width: 100%;
-  }
-
 /* Cell phone display */
 @media only screen and (max-width: 391px) {
 
