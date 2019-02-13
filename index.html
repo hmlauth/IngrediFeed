@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <!-- Google Icons Link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery Plugin for Social Media Links -->
+    <link rel="stylesheet" href="assets/Minimal-jQuery-Social-Sharing-Plugin-BEShare/demo/styles.css">
     <!-- Icon Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS Link -->
@@ -27,14 +29,17 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo"><i class="material-icons">copyright</i>IngrediFeed</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#" class="fa fa-facebook"></a>
-                <li><a href="#" class="fa fa-twitter"></a>
-                <li><a href="#" class="fa fa-youtube"></a>
-                <li><a href="#" class="fa fa-linkedin"></a>
-            </ul>
+            <div class="inline-share BEShare">
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jqueryscript.net%2Fdemo%2FMinimal-jQuery-Social-Sharing-Plugin-BEShare%2F&amp;t=jQuery%20BEShare%20Plugin%20Demo" title="Share this page on Facebook" target="_blank" class="fa fa-facebook" ></a>
+                    <li><a href="https://twitter.com/intent/tweet?text=IngrediFeed&amp;url=file%3A%2F%2F%2FUsers%2Fhannalauth%2FDesktop%2FCODE%2FHomework%2FRecipe-App%2Findex.html%23&amp;via=" title="Share this page on Twitter" target="_blank" aria-label="Share on twitter" class="fa fa-twitter"></a>
+                    <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.jqueryscript.net%2Fdemo%2FMinimal-jQuery-Social-Sharing-Plugin-BEShare%2F" title="Share this page on GPlus" target="_blank" class="fa fa-google"></a> 
+                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=file%3A%2F%2F%2FUsers%2Fhannalauth%2FDesktop%2FCODE%2FHomework%2FRecipe-App%2Findex.html%23&amp;title=IngrediFeed" title="Share this page on LinkedIn" target="_blank" aria-label="Share on linkedin" class="fa fa-linkedin"></a>
+                </ul>
+            </div>
         </div>
     </nav>
+
 
     <!-- PARALLX PHOTO - MAIN -->
     <div id="index-banner" class="parallax-container">
@@ -195,6 +200,11 @@
                     </div>
                 </div>
             </div>
+            <div class="container scrollspy">
+                <a href="#index-banner">
+                    <p class="back-top-button">Back to top</p>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -279,6 +289,11 @@
                     </div>
                 </div>
             </div>
+            <div class="container scrollspy">
+                <a href="#index-banner">
+                    <p class="back-top-button">Back to top</p>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -297,6 +312,11 @@
             <div id="favorites-body">
 
             </div>
+            <div class="container scrollspy">
+                <a href="#index-banner">
+                    <p class="back-top-button">Back to top</p>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -313,6 +333,9 @@
 
     <!-- jQuery Link - Need to put before Materialize link for Materialize jQuery logic to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery Plugin for Social Media Links -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="assets/Minimal-jQuery-Social-Sharing-Plugin-BEShare/dist/jQuery-BEShare.min.js"></script>
     <!-- JavaScript Materialize Link -->
     <script src="assets/javascript/materialize.min.js"></script>
     <!-- JavaScript Link -->

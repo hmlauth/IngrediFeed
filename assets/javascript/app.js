@@ -242,6 +242,59 @@ $(document).on('click', '.recipe-button-search', function () {
   populateFavorites(favorites);
 });
 
+// Social Media Links using jQuery Plugin
+$('.popup').BEShare({
 
+  // CSS class to custom the popup
+  'class': 'popup-share'
+  
+});
 
+$('.inline-share').BEShare({
+  'type': 'inline',
+  'targets': ['Facebook', 'Twitter', 'LinkedIn', 'GPlus', 'Print', 'Email'],
+  'onShare': function(targetName) {
+    ga('send', 'event', 'Social', 'Click', 'Share', targetName);
+  }
+});
+
+$('SELECTOR').BEShare({
+
+  // popup or inline
+  'type': 'popup',
+
+  // 'Facebook', 'Twitter', 'LinkedIn', 
+  // 'GPlus', 'Print', 'Email', 'SMS'
+  'targets': ['Facebook', 'Twitter'],
+
+  // addional CSS class
+  'class': PLUGIN_NAME,
+
+  // CSS prefix & suffix 
+  'prefix': 'icon-',
+  'suffix': '',
+
+  // adds aria-label parameter to link
+  'aria-prefix': 'Share on ',
+
+  // width / height of the social share window
+  'width': '626',
+  'height': '436',
+
+  // for <a href="https://www.jqueryscript.net/tags.php?/twitter/">twitter</a>
+  'via': '',
+
+  // message to share
+  'message': document.title,
+
+  // callback
+  'onShare': null,
+
+  // to use "rel" parameter as the url to share
+  'altLink': null,
+
+  // removes hash
+  'removeHash': false
+
+});
 

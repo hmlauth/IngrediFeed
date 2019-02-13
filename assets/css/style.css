@@ -8,6 +8,10 @@ body {
   background-color: black;
 }
 
+.BEShare {
+  color: black;
+}
+
 .fa {
   margin-right:5px;
   width:50px;
@@ -27,11 +31,11 @@ body {
   color: white;
  }
  
- .fa-youtube {
+ .fa-google {
   background: red;
   color: white;
  }
- 
+
  .fa-twitter {
   background: #55ACEE;
   color: white;
@@ -66,6 +70,11 @@ h5 {
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+
+#ingredient-validation, #cuisine-validation {
+  color: rgb(250, 74, 103);
+  font-style: italic;
 }
 
 #heading-container{
@@ -152,6 +161,8 @@ h5 {
   flex-wrap: wrap;
 }
 
+
+
 /* FOOTER*/
 footer {
   background-color: black;
@@ -206,42 +217,31 @@ footer {
   height: 300px;
 }
 
-.button-class {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.back-top-button {
+  text-align: center;
+  color: darkgrey;
 }
 
-#ingredient-validation, #cuisine-validation {
-  color: rgb(250, 74, 103);
-  font-style: italic;
+.back-top-button:hover {
+  text-align: center;
+  color: turquoise;
 }
 
-/* @media only screen and (max-width: 601px) {
-  .container {
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 993px) {
-  .container {
-    width: 70%;
-  }
-} */
-
-/* @media (max-width: 733px) {
-  .ingredient-body {
+@media only screen and (max-width: 960px) {
+  
+  .ingredient-body, .cuisine-body, #favorites-body {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    text-align: center;
   }
 
-  .ingredient-img {
-    height: 600px;
+  .favorite-card {
+    width: 100%;
   }
-} */
 
+/* Cell phone display */
 @media only screen and (max-width: 391px) {
 
   .ingredient-body, .cuisine-body, #favorites-body, #heading-buttons {
@@ -273,6 +273,10 @@ footer {
 
   .favorite-card {
     width: 100%;
+  }
+  
+  ingredient-img {
+    height: 400px
   }
 
 }
