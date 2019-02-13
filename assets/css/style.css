@@ -240,20 +240,43 @@ footer {
   .favorite-card {
     width: 100%;
   }
-  
-  .button-class {
+
+/* Cell phone display */
+@media only screen and (max-width: 391px) {
+
+  .ingredient-body, .cuisine-body, #favorites-body, #heading-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
   }
 
-  .ingredient-img {
-    height: 400px;
+  h1 {
+    font-size: 40px
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  .btn-large, .btn-small {
+      margin: 5px;
+  }
+
+  .ingredient-container, .cuisine-container, .favorites-container {
+    margin: 10px;
+  }
+
+  .favorite-card {
+    width: 100%;
+  }
+  
+  ingredient-img {
+    height: 400px
   }
 
 }
-
-
-/* @media screen and (max-width: 733px) { 
-
-} */
