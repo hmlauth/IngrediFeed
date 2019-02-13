@@ -19,7 +19,7 @@ Brainstorming text sesh with friends and family getting weird (*creative) over p
 </p>
 
 ## Front End
-Mobile-responsive front end made primarily with Materialize framework and also Google Fonts and css styling, and finished off with a jQuery Plugin for social media sharing just to have a working MVP.
+Mobile-responsive front end made primarily with Materialize framework and also Google Fonts and css styling. A jQuery Plugin is used to demonstrate potential functionality of social media icons.
 
 ### Materialize
 Key features include:
@@ -38,7 +38,7 @@ We also utilized Materialize's:
 - cards / card reveal
 
 ### Google Fonts
-For font we leaned toward a more rustic and light-hearted font, reminiscent to that which might appear on a chalkboard at a modern, trendy and healthy restaurant in a sunny Southern California. <strong>Our choice?</strong> <em>'Rock Salt', cursive</em> 
+For font we leaned toward a more rustic and light-hearted font, reminiscent to that which might appear on a chalkboard at a modern, trendy and healthy restaurant in a sunny Southern California. <strong>Our choice?</strong> <em>'Rock Salt', cursive</em> Name fits the food theme too!
 
 ## Back End
 ### APIs
