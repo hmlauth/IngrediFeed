@@ -19,7 +19,7 @@ Brainstorming text sesh with friends and family getting weird (*creative) over p
 </p>
 
 ## Front End
-The front end made use of primarily the Materialize framework and Google Fonts, supprted design aesthetics & responsiveness with local css styling, and then finished off with a jQuery Plugin for social media sharing just to have a working MVP.
+Mobile-responsive front end made primarily with Materialize framework and also Google Fonts and css styling, and finished off with a jQuery Plugin for social media sharing just to have a working MVP.
 
 ### Materialize
 Key features include:
@@ -50,8 +50,7 @@ Other Features include:
 - Event Delegation for on click events
 
 ## Opportunities for Improvement
-- Ensure app is responsive across all media screens.
-- Include user input validation that checks if input is spelled correctly and/or not jibberish. 
+- Include user input validation that checks if user input is spelled correctly and notify accordingly. 
 - Fix card height so height of each card stays uniform.
 - Create social media sharing ability without jQuery plugin.
 - Create Login Page along with user authentication so each user can have their own account.
