@@ -50,6 +50,7 @@ Other Features include:
 - Event Delegation for on click events
 
 ## Opportunities for Improvement
+- Make responsive across all devices. The application is currently response only in inspector "responsive" frame.
 - Include user input validation that checks if user input is spelled correctly and notify accordingly. 
 - Fix card height so height of each card stays uniform.
 - Create social media sharing ability without jQuery plugin.
